@@ -1,0 +1,12 @@
+---
+# eth0 internal vagrant
+# https://app.vagrantup.com/
+
+vms:
+  - name: rocky9
+    box: "generic/rocky9"
+    cpu: 1
+    ram: 2048
+    ip:
+      - 10.1.0.11       # eth1
+      - 10.2.0.11       # eth2

@@ -1,0 +1,13 @@
+---
+- name: Print all hostvars
+  debug:
+    var: hostvars[inventory_hostname]
+
+- name: Execute python --version
+  command: python --version
+  changed_when: false
+  register: python_reg
+
+- name: Print python version
+  debug:
+    var: python_reg.stdout

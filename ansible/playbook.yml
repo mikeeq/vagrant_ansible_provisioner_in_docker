@@ -1,0 +1,8 @@
+---
+- name: Ansible Playbook test
+  hosts:
+    - all
+  gather_facts: true
+  become: true
+  tasks:
+    - import_tasks: tasks/check_python_version.yml
