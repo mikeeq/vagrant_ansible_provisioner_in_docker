@@ -8,5 +8,13 @@ vms:
     cpu: 1
     ram: 2048
     ip:
+      - 10.11.0.11       # eth1
+      - 10.22.0.11       # eth2
+
+  - name: win2022
+    box: "peru/windows-server-2022-standard-x64-eval"
+    cpu: 4
+    ram: 4096
+    ip:
       - 10.1.0.11       # eth1
       - 10.2.0.11       # eth2

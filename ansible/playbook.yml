@@ -1,8 +1,19 @@
 ---
-- name: Ansible Playbook test
+- name: Ansible Playbook Linux
   hosts:
-    - all
+    - linux
   gather_facts: true
   become: true
   tasks:
     - import_tasks: tasks/check_python_version.yml
+
+- name: Ansible Playbook Windows
+  hosts:
+    - win
+  gather_facts: true
+  # become: true
+  tasks:
+    - name: Create directory structure
+      ansible.windows.win_file:
+        path: C:\Temp\folder\subfolder
+        state: directory

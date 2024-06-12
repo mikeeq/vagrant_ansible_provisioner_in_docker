@@ -12,7 +12,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # https://pypi.org/project/ansible/
-RUN pip3 install --no-cache-dir ansible~=7.2.0
+# https://pypi.org/project/pywinrm/
+RUN pip3 install --no-cache-dir ansible~=10.0.1 pywinrm~=0.4.3
 
 RUN echo "Host *\n  PubkeyAcceptedKeyTypes +ssh-rsa\n  HostKeyAlgorithms +ssh-rsa\n  UserKnownHostsFile /dev/null\n  StrictHostKeyChecking no" > /etc/ssh/ssh_config.d/vagrant.conf
 
